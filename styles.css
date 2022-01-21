@@ -1,0 +1,260 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   
+}
+/* general styling font*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* for hiding 3 brs on desktop, !important it will work in all circumstances*/
+
+.hide-on-mobile{
+    display: none !important;
+}
+
+@media (min-width: 992px){
+    .hide-on-mobile{
+        display: unset !important;
+    }
+.hide-on-desktop{
+    display: none !important;
+    }
+}
+
+/*padding of common as general purpose
+py for padding top
+pb for padding bottom*/
+.py-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.pb-5{
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.p-4{
+    padding: 1rem;
+}
+/* mt for top margin */
+.mt-5{
+    margin-top: 1.25rem;
+}
+/*m-2 for service card margin*/
+.m-2{
+    margin: 0.8rem;
+}
+.section-title{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* for make the page in seprate style like make margin on both sides*/
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* background colour for service section*/
+.bg-green{
+    background-color: rgb(252, 202, 182);
+}
+
+/* css for headdwe section*/
+
+header{
+display: flex;
+justify-content: flex-end ;
+background-color: rgb(6, 1, 10);
+padding: 1rem 2rem;
+align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.logo{
+    margin-right: auto;
+}
+.nav-list{
+    list-style: none;
+    display: inline;
+}
+.nav-list li{
+    display: inlines;
+    padding: 0 2rem;
+    display: inline;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+.nav-list li a:hover{
+    color: rgb(223, 110, 24);
+
+}
+.action-button{
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(214, 104, 14);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+/* for 3 bars in right side*/
+.hamburger{
+    margin-left: 1.5rem;
+    z-index: 4;
+
+}
+.hamburger div{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0  ;
+    background-color: rgb(223, 110, 24);
+}
+/* for mobile screen or small screen like web application*/
+.mobile-nav{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(15, 14, 15);
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    z-index: 3;
+    transition: 2s;
+}
+
+.mobile-nav li{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+}
+.mobile-nav li a:hover{
+    color: rgb(223, 110, 24);
+
+}
+.mobile-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin: 2rem 2rem;
+}
+.mobile-nav-change{
+    top: 0;
+}
+/* hamburger bar js animation on css*/
+.hamburger-change .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+.hamburger-change .bar2{ 
+    opacity: 0;
+}
+.hamburger-change .bar3{
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* CSS for the hero section*/
+/* hero-bg for image upload on hero page of site*/
+.hero-bg{
+    background-image: url('../images/hero1.jpg');
+    background-position: center;
+    height: 600px;
+    background-size: cover;
+    position: relative; /* position of the text will be hold on the image box its self*/
+}
+/* text on image */
+.hero-text{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(14, 13, 12, 0.4);
+    width: 100%;
+    height: auto;
+}
+.hero-text h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.hero{
+    color: #fff;
+}
+/* about section page means next page */
+
+.about-img img {
+    width: 100%;
+}
+.about-text ul{
+    margin-left: 1.25rem;
+    padding-right: 0.5rem;
+}
+@media (min-width: 640px){
+    .md-flex{
+        display: flex;
+    }
+.about-text ul{
+    width: 50%;
+    }
+}
+
+@media (min-width: 992px){
+    .lg-flex{
+        display: flex;
+    }
+    .about-img{
+        width: 50%;
+    }
+    .about-text{
+        width: 50%;
+        padding-left: 1.25rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+/* CSS for service section*/
+.services h2{
+    color: rgb(20, 15, 15);
+}
+.card img{
+    width: 100%;
+}
+@media (min-width: 640px){
+    .services .md-flex{
+        flex-wrap: wrap;
+ 
+   }
+   .services .w-50{
+       width: 50%;
+   }
+}
+.card{
+    background-color: #fff;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+/*card hover for style with shadow, like 3d shades*/
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+@media (min-width: 992px){
+    .services .md-flex{
+        flex-wrap: unset;
+ 
+   }
+   .services .w-50{
+       width: unset;
+   }
+}
